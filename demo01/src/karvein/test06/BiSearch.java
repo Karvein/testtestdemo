@@ -1,6 +1,11 @@
 package karvein.test06;
 
+import org.junit.jupiter.api.Test;
+
 public class BiSearch {
+
+    public final static int[] sortedArray = {0,1,4,5,9,11,15,25,26,33,51,68,69,269,652,656,858,8064,15262,25874};
+
     public static int biSearch(int[] array, int a) {
         // 二分查找
         int low = 0;
@@ -17,5 +22,12 @@ public class BiSearch {
             }
         }
         return -1;
+    }
+
+    @Test
+        // 二分查找测试
+    void test() {
+        System.out.print("\nBiSearch Array: ");
+        System.out.println(BiSearch.biSearch(sortedArray,25));
     }
 }

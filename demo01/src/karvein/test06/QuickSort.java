@@ -1,10 +1,14 @@
 package karvein.test06;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
 
 public class QuickSort {
-    // 快速排序
 
+    public final static int[] intArray = {25,68,69,4,858,269,5,652,656,15262,25874,51,11,15,26,8064,33,1,9,0};
+
+    // 快速排序
     public static int[] quickSort(int[] arr, int left, int right) {
         if (left < right) {
             int partitionIndex = partition(arr, left, right);
@@ -33,5 +37,17 @@ public class QuickSort {
         arr[j] = temp;
 //        PrintArray.print(arr);
 //        System.out.println();
+    }
+
+    @Test
+    // 快速排序测试
+    public void test03() {
+        System.out.print("\nInital Array: ");
+        int[] array;
+        PrintArray.print(intArray);
+        System.out.print("\nQuickSorted Array: ");
+        array = intArray;
+        int[] quickSortTest = QuickSort.quickSort(array,0,array.length-1);
+        PrintArray.print(quickSortTest);
     }
 }

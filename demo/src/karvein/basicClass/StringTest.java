@@ -1,5 +1,8 @@
 package karvein.basicClass;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class StringTest {
     public static void main(String[] args) {
         String str1 = "通话";
@@ -24,6 +27,5 @@ public class StringTest {
                 stringBuffer.toString().toCharArray()) {
             System.out.println(i);
         }
-
     }
 }
